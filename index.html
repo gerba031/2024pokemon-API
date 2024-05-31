@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>pokemon API</title>
     <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+
+    <script src="./pokemon-script.js" defer></script>
 </head>
+
 <body>
-    pokemon API
+    <p>pokemon API
+    </p>
+    <script id="pokemon-lista" type="text/x-handlebars-template">
+    <table>
+       //table header
+        <tr>
+            <th>#</th>
+            <th>Ime</th>
+        </tr>
+        //table data
+        {{#each pokemon}}
+        <tr>
+            <td>{{increaseIndex @index}}.</td>
+            <td><a href="{{this.url}}">{{this.name}}</a></td>
+        </tr>
+        {{/each}}
+    </table> </script>
+    <!-- output from template -->
+    <div id="pokemon-output"> <!-- output from template --></div>
+
 </body>
+
 </html>
