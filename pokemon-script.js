@@ -4,7 +4,7 @@ Handlebars.registerHelper("increaseIndex", function (inValue) {
 
 let xhr = new XMLHttpRequest();
 
-xhr.open("GET", "https://pokeapi.co/api/v2/pokemon-color/yellow", true);
+xhr.open("GET", "https://pokeapi.co/api/v2/pokemon-color/red", true);
 
 function popuniPokemone() {
     const data = JSON.parse(xhr.response);

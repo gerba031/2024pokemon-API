@@ -8,22 +8,26 @@
     <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
 
     <script src="./pokemon-script.js" defer></script>
+
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     <p>pokemon API
     </p>
     <script id="pokemon-lista" type="text/x-handlebars-template">
-    <table>
+    <table class="table-primary table striped">
        //table header
-        <tr>
-            <th>#</th>
-            <th>Ime</th>
+        <tr class="table-secondary">
+            <th class="d-none d-sm-block col-sm-block">#</th>
+            <th >Ime</th>
         </tr>
         //table data
         {{#each pokemon}}
         <tr>
-            <td>{{increaseIndex @index}}.</td>
+            <td class="d-none d-sm-block col-sm-block">{{increaseIndex @index}}.</td>
             <td><a href="{{this.url}}">{{this.name}}</a></td>
         </tr>
         {{/each}}
