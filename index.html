@@ -9,9 +9,11 @@
 
     <script src="./pokemon-script.js" defer></script>
 
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
 
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -28,7 +30,13 @@
         {{#each pokemon}}
         <tr>
             <td class="d-none d-sm-block col-sm-block">{{increaseIndex @index}}.</td>
-            <td><a href="{{this.url}}">{{this.name}}</a></td>
+            <td><a href="#"
+                data-bs-toggle="popover"
+                title="Pokemon info"
+                data-bs-content="{{this.url}}"
+                data-bs-trigger="hover focus"
+                tabindex="0"
+                >{{this.name}}</a></td>
         </tr>
         {{/each}}
     </table> </script>
