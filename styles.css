@@ -1,0 +1,9 @@
+.headerStyle {
+    color: red imo !important;
+}
+
+.zebra {
+    --bs-table-bg: black;
+    --bs-table-color: white;
+
+}
